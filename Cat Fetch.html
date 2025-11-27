@@ -237,25 +237,23 @@
       while (choices.length < n) {
         let candidate = getRandomElement(possibleChoices);
         if (!choices.includes(candidate)) {
-            choices.push(candidate);
+          choices.push(candidate);
         }
-
-
       }
 
       return shuffleArray(choices); // some array
     }
-      // while (choices.length > n) {
-      //   let candidate = getRandomElement(possibleChoices);
-      //   if (!choices.includes(candidate)) {
-      //     choices.push(candidate);
-      //   }
-      // }
+    // while (choices.length > n) {
+    //   let candidate = getRandomElement(possibleChoices);
+    //   if (!choices.includes(candidate)) {
+    //     choices.push(candidate);
+    //   }
+    // }
 
-  // some array
+    // some array
 
-      // Use a while loop and the getRandomElement() function
-      // Make sure there are no duplicates in the array
+    // Use a while loop and the getRandomElement() function
+    // Make sure there are no duplicates in the array
 
     // TODO 2
     // Given a URL such as "https://images.dog.ceo/breeds/poodle-standard/n02113799_2280.jpg"
@@ -268,9 +266,17 @@
       let rev = unsplit.split("-").reverse().join(" ");
 
       return rev;
-      // The string method .split(char) may come in handy
-      // Try to use destructuring as much as you can
     }
+    // The string method .split(char) may come in handy
+    // Try to use destructuring as much as you can
+    //    function getBreedFromURL(url) {
+    //   let unsplit = url.split("/")[4];
+    //   let [breed, subbreed] = unsplit.split("-");
+
+    //   return [subbreed, breed].join(" ").trim();
+    //   // The string method .split(char) may come in handy
+    //   // Try to use destructuring as much as you can
+    // }
 
     // TODO 3
     // Given a URL, fetch the resource at that URL,
@@ -307,13 +313,14 @@
 
       for (let choice of choicesArray) {
         const button = document.createElement("button");
+        button.textContent = choice;
         button.name = choice;
         button.value = choice;
-        button.textContent = choice;
         button.addEventListener("click", buttonHandler);
-        options.appendChild("button");
+        options.appendChild(button);
       }
     }
+
     // Function to add the quiz content to the page
     function renderQuiz(imgUrl, correctAnswer, choices) {
       const image = document.createElement("img");
